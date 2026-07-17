@@ -55,7 +55,6 @@ This project was a deep dive into core Excel analytics features. Here's what was
 )
 ```
 
-![Background Table](Resources/images/1_Salary_Dashboard_Screenshot1.png)
 
 - **Multi-Criteria Filtering:** Checks job title, country, and schedule type, while excluding blank salaries.
 - **Array Formula:** Combines `MEDIAN()` with a nested `IF()` to evaluate the full array at once.
@@ -67,14 +66,12 @@ This project was a deep dive into core Excel analytics features. Here's what was
 =FILTER(J2#,(NOT(ISNUMBER(SEARCH("and",J2#))+ISNUMBER(SEARCH(",",J2#))))*(J2#<>0))
 ```
 
-![Job Schedule Type Table](Resources/images/1_Salary_Dashboard_Type.png)
 
 - **Unique List Generation:** Uses `FILTER()` to exclude entries containing "and" or commas, and to drop zero values.
 - **Purpose:** Generates a clean list of unique job schedule types used elsewhere in the dashboard.
 
 ### ❎ Data Validation
 
-![Data Validation Setup](Resources/images/1_Salary_Dashboard_Data_Validation.png)
 
 - Applied filtered lists as validation rules on the **Job Title**, **Country**, and **Type** inputs.
 - Restricts user input to predefined, validated options.
